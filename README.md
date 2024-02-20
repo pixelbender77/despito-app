@@ -21,15 +21,12 @@ Track your progress over time with visual charts and graphs that show changes in
 
 ## How to Use:
 
-1. **Sign Up/Login:** Create an account or log in to access personalized features and save your progress.
 
-2. **Enter Your Information:** Provide basic information such as your age, weight, height, and dietary preferences to receive customized recommendations.
 
-3. **Explore Recommendations:** Browse personalized advice, recipes, and exercise suggestions tailored to your individual needs and goals.
+1. **Enter Your Information:** Provide basic information such as your age, weight, height, and dietary preferences to receive customized recommendations.
 
-4. **Track Your Progress:** Use our tracking tools to monitor your food intake, exercise habits, and overall progress towards your health goals.
+2. **Explore Recommendations:** Browse personalized advice, recipes, and exercise suggestions tailored to your individual needs and goals.
 
-5. **Stay Connected:** Connect with our community for support, motivation, and inspiration on your health and wellness journey.
 
 ## Get Started:
 
