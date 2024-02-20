@@ -35,4 +35,4 @@ Track your progress over time with visual charts and graphs that show changes in
 
 Ready to take control of your health and well-being? Sign up now and let's embark on this journey together! Your healthiest self is just a few clicks away. 🌱💪
 
-For any questions or assistance, please contact us at [support@example.com](mailto:support@example.com).
+
