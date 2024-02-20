@@ -264,9 +264,10 @@ footer {
     color: var(--primary-text);
 }
 
-.content {
-    font-family: serif;
-    color: #a7a7a7;
+.content,
+ul {
+    font-family: serif !important;
+    color: #818181;
     text-align: justify;
     line-height: 25px;
     margin-bottom: 20px;

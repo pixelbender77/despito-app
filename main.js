@@ -102,7 +102,7 @@ function login() {
 
 
         //updating the fields
-        chat_text.textContent = `Welcome ${userName}, I am Desta and i am your Dietician 👩‍⚕️ 😊.Tell me abit about you and i'll give you some advice so you grow healthy. `;
+        chat_text.textContent = `Greetings,${userName} 😊. I am Desta, your dietitian assistant. I am here to help you with your nutrition and wellness. Please share some information about yourself and I will offer you some guidance to improve your health `;
         typeWrite(); //We typewrite the new chat_text.
 
         label1.innerHTML = `Age       :<input id='input1' type='number' min="0" placeholder='What is your age?' required>
