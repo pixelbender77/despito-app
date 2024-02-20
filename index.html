@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despito | Home</title>
+
+
+    <!--For chat bot  -->
+    <link rel="stylesheet" href="chatbot_style.css">
+    <!-- For main page -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts Link For Icons -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="chatBotScript.js" defer></script>
+</head>
+</head>
+
+<body>
+    <header id="navbar">
+        <a href="index.html"><img id="navbar-logo" src="assets/logo.png" alt="Despito Logo" /></a>
+
+        <ul>
+            <li>
+                <a href="about.html">about</a>
+            </li>
+            <li>
+                <a href="developer.html">developer</a>
+            </li>
+
+        </ul>
+    </header>
+    <main>
+
+        <div class="main-container">
+            <section class="logo-and-chat">
+                <img class="main-container__logo" src="assets/logo.png" alt="Despito Logo">
+                <div class="chat">
+                    <span class="avatar-container">
+                        <img src="https://cdn2.iconfinder.com/data/icons/avatar-and-emotion-2/64/02-Smile-512.png" alt="Chat avatar">
+                    </span>
+                    <div class="chat-container">
+                        <p id="chat-text">Hey there, Welcome! 😊 I'm Desta, your dietitian assistant 👩‍⚕️. I'm so glad you're here! Before we dive in, Can you please share your name and email with us? That way, we can tailor our advice just for you . Thanks a bunch!</p>
+                    </div>
+                </div>
+            </section>
+            <form class="form" action="">
+                <div class="inputs">
+                    <label for="input1" id="label1">Name <input id="input1" type="text" min="0" placeholder="Enter your name" required></label>
+                    <label for="input2" id="label2">Email <input id="input2" type="email" min="0" placeholder="Enter your email" required></label>
+                </div>
+
+                <button id="action-button" type="button">Start</button>
+            </form>
+
+        </div>
+    </main>
+    <!--  -->
+    <!--  -->
+    <!-- Chat bot-->
+    <button class="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    <div class="chatbot">
+        <header>
+            <h2>Chatbot</h2>
+            <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Hi there 👋<br>How can I help you today?</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+            <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+    </div>
+    <!-- End of chatbot-->
+    <!--  -->
+    <footer>
+        <p>Copyright(c) 2024 Despito</p>
+    </footer>
+</body>
+<script src="main.js"></script>
+
+</html>

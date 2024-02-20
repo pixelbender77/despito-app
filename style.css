@@ -1,0 +1,297 @@
+/*Importing segoe print font*/
+
+@import url(https://db.onlinewebfonts.com/c/3e7c392e6314d3043afade17def0975c?family=Segoe+Print);
+
+/*Importing Fredoka font*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+:root {
+    --main-background: #FFF1FD;
+    /**/
+    --secondary-background: #BA91BD;
+    --tertiary-background: #332135;
+    --main-accent: #3290FB;
+    --primary-text: #707070;
+    --secondary-text: #B5B5B5;
+    --button-gradient: linear-gradient(to top right, #3290FB, #B84EBB);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Segoe Print";
+}
+
+body {
+    background-color: var(--main-background);
+}
+
+
+/*  =====  Navbar ===== */
+
+#navbar {
+    min-width: 100vw;
+    min-height: 90px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-text);
+    background-color: var(--main-background);
+    padding: 5px 50px;
+    /* border: 1px solid #3290FB; */
+    z-index: 1000;
+}
+
+#navbar-logo {
+    width: 150px;
+    height: fit-content;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    font-size: 1.2rem;
+}
+
+
+/*nav links line in column*/
+
+@media screen and (max-width: 555px) {
+    #navbar ul {
+        flex-direction: column;
+        gap: 1px;
+        font-size: 1rem;
+    }
+}
+
+#navbar ul li a:any-link {
+    display: inline-block;
+    /*inline-block property will permit the use of transform during the hover effect.*/
+    text-decoration: none;
+    color: var(--primary-text);
+    transition: all .2s ease-in-out;
+    flex-wrap: wrap;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a:focus {
+    color: var(--main-accent);
+    transform: translateY(-3px);
+}
+
+
+/*  =====  M A I N ===== */
+
+main {
+    min-height: 100vh;
+}
+
+.main-container {
+    max-width: 960px;
+    min-height: 500px;
+    /*defining maximum width of the container*/
+    margin-inline: auto;
+    /*vertical alignment*/
+    /* background-color: aqua; */
+    background-color: white;
+    margin-top: 110px;
+    border-radius: 15px;
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.308);
+    transition: all .5s ease-in-out;
+    /*This is for switching*/
+}
+
+
+/*Centered logo  and chat section*/
+
+.logo-and-chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main-container__logo {
+    max-width: 150px;
+}
+
+.chat {
+    display: flex;
+    gap: 3rem;
+}
+
+
+/*alignment becomes vertical ie avatar and chat container line up vertically*/
+
+@media screen and (max-width: 555px) {
+    .chat {
+        flex-direction: column;
+    }
+}
+
+.avatar-container img {
+    max-width: 70px;
+    background-color: #BA91BD;
+    clip-path: circle();
+    margin: auto;
+}
+
+.chat-container {
+    background-color: var(--main-accent);
+    padding: 20px;
+    color: white;
+    border-radius: 0 50px 50px 50px;
+    padding: 30px;
+}
+
+.chat-container p {
+    font-family: "Fredoka", sans-serif;
+    line-height: 1.3rem;
+}
+
+
+/*Form*/
+
+.form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    /* background-color: #BA91BD; */
+    width: 100%;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    /* background-color: #332135; */
+}
+
+.form label {
+    color: #bebebe;
+}
+
+.form label input {
+    min-width: 300px;
+    max-width: 500px;
+    height: 40px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #a7a7a7;
+    padding: 5px;
+    font-family: "Fredoka", serif;
+}
+
+.form label input:focus {
+    border: 1px solid var(--main-accent);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--main-accent);
+}
+
+#action-button {
+    margin-top: 50px;
+    align-self: flex-end;
+    /*Stubborn alignment ( Aligning itself at the end despite parent setting it's aligment to 'center'. That's the power of align-self*/
+    min-width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: "Fredoka", serif;
+    font-size: 1.1rem;
+    border: none;
+    color: white;
+    background: var(--button-gradient);
+    padding: 2px;
+    cursor: pointer;
+}
+
+#action-link {
+    align-self: flex-end;
+}
+
+#action-button:hover,
+#action-button:focus {
+    background: var(--main-accent)
+}
+
+
+/*Footer*/
+
+footer {
+    margin-top: 100px;
+    bottom: 100vh;
+    /* min-width: 100vw;// Do not use this on footer, it creates a vertical scroll bar */
+    min-height: 40px;
+    background-color: var(--tertiary-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    font-size: .8rem;
+    color: rgba(255, 255, 255, 0.692);
+    font-family: "Fredoka", serif;
+}
+
+@media screen and (max-width: 550px) {
+    img,
+    #navbar #navbar-logo {
+        width: 100px;
+    }
+}
+
+
+/*About page*/
+
+.title {
+    font-family: "Fredoka", serif;
+    font-size: 2rem;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    color: var(--primary-text);
+}
+
+.content {
+    font-family: serif;
+    color: #a7a7a7;
+    text-align: justify;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+
+/*Because of js Stuff*/
+
+.chat-container {
+    min-width: 300px;
+    max-width: 400px;
+    /*This is for the typewritter.
+    Explanation: Initially, there will be no text in the chat-container and if we don't define a minimum width it will be weird
+    seeing the chat container have say 2px width initially and grow.. so we give it an initall minimum width .*/
+}
+
+.emphasize {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+/*
+label[for="input3"] {
+    display: none;
+}
+The above is just wow.. masterpiece css 😅😊
+Finally since CSS can't completely remove elements form page (logically) i had to remove it*/
