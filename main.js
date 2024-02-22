@@ -171,7 +171,7 @@ typeWrite();
 actionButton.onclick = login;
 
 //Buttons and Listeners
-actionButton.addEventListener("click", actionButtonFunction);
+// actionButton.addEventListener("click", actionButtonFunction); //This was no longer needed so i removed it. Basically i replaced it by directly assigning the .onclick functions
 
 
 

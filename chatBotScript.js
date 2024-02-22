@@ -8,7 +8,7 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null; // Variable to store user's message
-const API_KEY = "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"; // Open Ai Chat GPT secret key
+// const API_KEY = "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"; // Open Ai Chat GPT secret key
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -34,7 +34,13 @@ const generateResponse = (chatElement) => {
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
-            messages: [{ role: "user", content: userMessage }],
+            messages: [{
+                role: "user",
+                content: userMessage
+            }, {
+                role: "system",
+                content: "You are a dietitian assistant. You are called Desta and you are very kind"
+            }],
         })
     }
 
