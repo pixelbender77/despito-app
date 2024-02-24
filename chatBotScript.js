@@ -8,7 +8,8 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null; // Variable to store user's message
-// const API_KEY = "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"; // Open Ai Chat GPT secret key
+const API_KEY = process.env.API_KEY; //Fetching api key from environment variables
+// const API_KEY = "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"; //  key
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
