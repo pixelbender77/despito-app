@@ -1,6 +1,3 @@
-//
-//       === Chat bot ==
-//
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
@@ -8,8 +5,7 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null; // Variable to store user's message
-const API_KEY = process.env.API_KEY; //Fetching api key from environment variables
-// const API_KEY = "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"; //  key
+const API_KEY = process.env.API_KEY;
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -35,13 +31,9 @@ const generateResponse = (chatElement) => {
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
-            messages: [{
-                role: "user",
-                content: userMessage
-            }, {
-                role: "system",
-                content: "You are a dietitian assistant. You are called Desta and you are very kind"
-            }],
+            messages: [{ role: "user", content: userMessage },
+                { role: "system", content: "You are a dietitian assistant. You are called desta , you're very kind and here to help." }
+            ],
         })
     }
 
@@ -93,7 +85,3 @@ chatInput.addEventListener("keydown", (e) => {
 sendChatBtn.addEventListener("click", handleChat);
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
-//
-//
-//  === Main JS ===
-//
