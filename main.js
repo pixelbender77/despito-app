@@ -124,7 +124,6 @@ function login() {
         console.log("You didn't enter anything");
 
     }
-
 }
 
 function resetForm() {
@@ -173,22 +172,6 @@ actionButton.onclick = login;
 //Buttons and Listeners
 // actionButton.addEventListener("click", actionButtonFunction); //This was no longer needed so i removed it. Basically i replaced it by directly assigning the .onclick functions
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //won't finally use this function.. but was good knowing how to do this.
 //input check (checking inputs aren't null)
 function checkInput(page) {
@@ -215,6 +198,10 @@ function checkInput(page) {
     }
 
 }
+
+// Load environment variables from .env file
+// require('dotenv').config();
+// const API_KEY = process.env.API_KEY;
 
 //old way of doing the typewritter stuff
 // chat_text.innerText = ""; //now we set the inner text to an empty string so the type writter will start writting from 0

@@ -5,7 +5,7 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null; // Variable to store user's message
-const API_KEY = process.env.API_KEY;
+const API_KEY = "API KEY HERE"; //
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -22,7 +22,7 @@ const generateResponse = (chatElement) => {
     const API_URL = "https://api.openai.com/v1/chat/completions";
     const messageElement = chatElement.querySelector("p");
 
-    // Define the properties and message for the API request
+    // Defining the properties and message for the API request
     const requestOptions = {
         method: "POST",
         headers: {
@@ -32,7 +32,8 @@ const generateResponse = (chatElement) => {
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
             messages: [{ role: "user", content: userMessage },
-                { role: "system", content: "You are a dietitian assistant. You are called desta , you're very kind and here to help." }
+                { role: "system", content: "You are a dietitian assistant. Your name is desta and you're very kind." }
+
             ],
         })
     }
